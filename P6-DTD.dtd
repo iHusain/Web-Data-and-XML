@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT departments (department+, instructor+, course+)>
+<!ELEMENT department (dno, name)>
+<!ATTLIST department
+	dno ID #REQUIRED
+	instructed_by IDREFS #REQUIRED
+	courses_offered IDREFS #REQUIRED
+	headed_by IDREF #REQUIRED
+>
+<!ELEMENT dno (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT instructor (name, address, ssn, salary, rank, degrees+)>
+<!ATTLIST instructor
+	id ID #REQUIRED
+>
+<!ELEMENT address (street, zipcode)>
+<!ELEMENT street (#PCDATA)>
+<!ELEMENT zipcode (#PCDATA)>
+<!ELEMENT ssn (#PCDATA)>
+<!ELEMENT salary (#PCDATA)>
+<!ELEMENT rank (#PCDATA)>
+<!ELEMENT degrees (#PCDATA)>
+<!ELEMENT course (code, name)>
+<!ATTLIST course
+	code ID #REQUIRED
+	taught_by IDREF #REQUIRED
+	has_prerequisites IDREFS #IMPLIED
+	is_prerequisite_for IDREFS #IMPLIED
+>
+<!ELEMENT code (#PCDATA)>
