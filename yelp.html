@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- Student Name:   Husain Mandsaurwala-->
+<html lang="en">
+  <head>
+    <title>Web Mashup: Display Best Restaurants on a Map</title>
+    <meta charset="utf-8"/>
+    <style>
+      #map-canvas {
+        width: 600px;
+        height: 500px;
+      }
+    </style>
+    <script src="https://maps.google.com/maps/api/js"></script>
+    <script type="text/javascript" src="yelp.js"></script>
+  </head>
+  <body>
+  	<table border=1>
+  		<tr>
+    		<form>
+       			<label>Search Terms: <input type="text" id="search"/></label>
+       			<input type="button" onclick="sendRequest();" value="Find"/>
+    		</form>
+  		</tr>
+  		<tr>
+    		<td><div id="output"></div></td>
+    		<td><div id="map-canvas"></div></td>
+    	</tr>
+    </table>
+  
+  </body>
+</html>
