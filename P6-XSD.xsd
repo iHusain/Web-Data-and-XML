@@ -1,0 +1,52 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="departments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="department">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:byte" name="dno"/>
+              <xs:element type="xs:string" name="name"/>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="dno" use="required"/>
+            <xs:attribute type="xs:string" name="headed_by" use="required"/>
+            <xs:attribute type="xs:string" name="instructed_by" use="required"/>
+            <xs:attribute type="xs:string" name="courses_offered" use="required"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="instructor" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="name"/>
+              <xs:element name="address">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="street"/>
+                    <xs:element type="xs:int" name="zipcode"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:short" name="ssn"/>
+              <xs:element type="xs:string" name="salary"/>
+              <xs:element type="xs:byte" name="rank"/>
+              <xs:element type="xs:string" name="degrees"/>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="id" use="required"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="course" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="code"/>
+              <xs:element type="xs:string" name="name"/>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="code" use="required"/>
+            <xs:attribute type="xs:string" name="taught_by" use="required"/>
+            <xs:attribute type="xs:string" name="is_prerequisite_for" use="optional"/>
+            <xs:attribute type="xs:string" name="has_prerequisites" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
