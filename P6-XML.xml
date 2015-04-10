@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE departments SYSTEM "proj6_HM.dtd">
+<departments>
+	<department dno="d1" headed_by="re1234" instructed_by="re1234 mw6789" courses_offered="CSE5324 CSE5800 CSE6324 CSE6800">
+		<dno>1</dno>
+		<name>CSE</name>
+	</department>
+	<instructor id="re1234">
+		<name>Elmasri</name>
+		<address>
+			<street>Greek Row</street>
+			<zipcode>76013</zipcode>
+		</address>
+		<ssn>1234</ssn>
+		<salary>150,000</salary>
+		<rank>1</rank>
+		<degrees>Phd, Masters</degrees>
+	</instructor>
+	<instructor id="mw6789">
+		<name>Wright</name>
+		<address>
+			<street>UTA blvd</street>
+			<zipcode>76013</zipcode>
+		</address>
+		<ssn>6789</ssn>
+		<salary>130,000</salary>
+		<rank>2</rank>
+		<degrees>Phd, Masters</degrees>
+	</instructor>
+	<course code="CSE5324" taught_by="re1234" is_prerequisite_for="CSE6324">
+		<code>CSE5324</code>
+		<name>SE</name>
+	</course>
+	<course code="CSE5800" taught_by="mw6789" is_prerequisite_for="CSE6800">
+		<code>CSE5800</code>
+		<name>Info Sec</name>
+	</course>
+	<course code="CSE6324" taught_by="re1234" has_prerequisites="CSE5324">
+		<code>CSE6324</code>
+		<name>Advance SE</name>
+	</course>
+	<course code="CSE6800" taught_by="mw6789" has_prerequisites="CSE5324">
+		<code>CSE6800</code>
+		<name>Advance Info Sec</name>
+	</course>
+</departments>
